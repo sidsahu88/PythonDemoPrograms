@@ -1,0 +1,7 @@
+1. Import the data
+2. Clean the data
+3. Split the data sets into training and test sets
+4. Build a model using ML algorithm
+5. Train the model
+6. Make the prediction
+7. Evaluate and improve
