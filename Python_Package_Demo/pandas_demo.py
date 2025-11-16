@@ -1,8 +1,8 @@
-import pandas as pnd
+import pandas as pd
 
 
-csv_file = "../music.csv"  # csv file is present at parent directory of this program.
-df = pnd.read_csv(csv_file)  # df is dataframe holding data present in file
+csv_file = "ML_Demo\music.csv"  # csv file is present at parent directory of this program.
+df = pd.read_csv(csv_file)  # df is dataframe holding data present in file
 
 print(df.head())
 print('\n')
