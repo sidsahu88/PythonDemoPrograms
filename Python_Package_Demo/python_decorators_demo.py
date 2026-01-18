@@ -9,6 +9,7 @@ def logger(func):
 
 @logger # Decorator annotation
 def average(*args):
-    return sum(*args) / len(*args)
+    return sum(args) / len(args)
 
-average((2, 4, 5, 10))
+if __name__ == "__main__":
+    average(2, 4, 5, 10)

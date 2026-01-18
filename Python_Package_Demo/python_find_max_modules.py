@@ -1,4 +1,4 @@
-from python_utils import find_max
+from python_find_max import find_max
 
 numbers = [5, 2, 6, 7, 1, 4, 9]
 

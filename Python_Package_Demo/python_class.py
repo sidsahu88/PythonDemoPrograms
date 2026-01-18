@@ -1,5 +1,4 @@
 class Point:
-
     # Contructor Initialization. Self is current object.
     def __init__(self, x, y):
         self.x = x
