@@ -14,9 +14,9 @@ DATASET = os.getenv("DATASET")
 REGION = os.getenv("REGION")
 TABLE = os.getenv("TABLE")
 
-embedding_model = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001", 
-                                               api_key=API_KEY, 
-                                               vertexai=False, 
+embedding_model = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001",
+                                               api_key=API_KEY,
+                                               vertexai=False,
                                                project=PROJECT_ID)
 
 # vector_store = BigQueryVectorStore(
@@ -29,10 +29,10 @@ embedding_model = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-00
 
 vector_store = InMemoryVectorStore(embedding=embedding_model)
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", 
-                             api_key=API_KEY, 
-                             vertexai=False, 
-                             project=PROJECT_ID, 
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite",
+                             api_key=API_KEY,
+                             vertexai=False,
+                             project=PROJECT_ID,
                              location=REGION)
 
 rag = RAGProcessor(vector_store, llm)
@@ -60,7 +60,7 @@ while True:
         print("Exiting...")
         break
     query = user_input
-    
+
     print(f"Retrieving data from vector store for query: '{query}'")
     relevant_docs = rag.retrieve_data_from_vector_store(query)
 

@@ -1,16 +1,23 @@
 # Parent Class
 class Mammal:
     def walk(self):
-        print('Walk')
+        print('Walking...')
 
+class Fish:
+    def swim(self):
+        print('Swimming...')
 
+# Child Class
 class Dog(Mammal):
     pass  # To not defining any method of class
 
-
 class Cat(Mammal):
     def jump(self):
-        print('Jump')
+        print('Jumping...')
+
+class Whale(Mammal, Fish):
+    def walk(self):
+        raise NotImplementedError("Whale cannot walk!")
 
 
 dog = Dog()
@@ -21,3 +28,9 @@ cat = Cat()
 print('\nCat')
 cat.walk()
 cat.jump()
+
+
+w = Whale()
+print('\nWhale')
+w.swim()
+w.walk()

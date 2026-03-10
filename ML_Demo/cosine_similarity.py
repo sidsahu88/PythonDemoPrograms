@@ -1,7 +1,8 @@
 import numpy as np
 
+
 def cosine_similarity(vec_a, vec_b):
-    """Calculate the cosine similarity between two vectors.
+    """ Calculate the cosine similarity between two vectors.
         Cosine similarity is defined as the dot product of the vectors
         divided by the product of their magnitudes.
     """
@@ -10,8 +11,10 @@ def cosine_similarity(vec_a, vec_b):
     squared_b = vec_b**2
     magnitude_a = np.sqrt(np.sum(squared_a))
     magnitude_b = np.sqrt(np.sum(squared_b))
+
     if magnitude_a == 0 or magnitude_b == 0:
         return 0.0
+
     return dot_product / (magnitude_a * magnitude_b)
 
 
