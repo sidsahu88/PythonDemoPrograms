@@ -1,11 +1,11 @@
+from collections import defaultdict
+
+
 def calculate_frequency(mylist: list):
-    freq_dict = {}
+    freq_dict = defaultdict(int)
 
     for n in mylist:
-        if n in freq_dict:
-            freq_dict[n] += 1
-        else:
-            freq_dict[n] = 1
+        freq_dict[n] += 1
     
     return freq_dict
 

@@ -1,7 +1,7 @@
 import unittest
 from math import pi
 
-from Python_Package_Demo.circle_area import area
+from circle_area import area
 
 
 class CircleAreaTest(unittest.TestCase):
@@ -18,5 +18,5 @@ class CircleAreaTest(unittest.TestCase):
         self.assertRaises(TypeError, area, True)
         self.assertRaises(TypeError, area, 'radius')
 
-# if __name__ == '__main__':
-#    unittest.main()
+if __name__ == '__main__':
+   unittest.main()

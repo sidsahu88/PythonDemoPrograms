@@ -1,4 +1,4 @@
-def square(number: int):
+def square(number: int) -> int:
     return number ** 2
 
 
